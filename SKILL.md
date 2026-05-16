@@ -50,9 +50,9 @@ Their outputs are listed below.
 Do not invent new ideas. Synthesize only.
 ```
 
-### Estimated cost
+### Token usage
 
-8 Sonnet researchers + 1 Opus synthesizer ≈ $2–5 per run (depends on question length).
+8 Sonnet researchers + 1 Opus synthesizer per run. On Claude Pro/Max subscriptions this just eats from your usage allowance — no per-run dollar cost. If you're on the pay-as-you-go API, expect meaningful token spend (long context per agent × N agents). Use it where the decision matters.
 
 ---
 
@@ -87,9 +87,9 @@ Read all rounds in order. Then:
 Write for a decision-maker, not for engineers.
 ```
 
-### Estimated cost
+### Token usage
 
-4 Sonnet agents x 3 rounds + 1 Opus synthesizer ≈ $4–8 per run.
+4 Sonnet agents × 3 rounds + 1 Opus synthesizer per run. Higher than Pattern A because each round re-feeds prior rounds as context. Free on Pro/Max subscriptions; meaningful spend on the pay-as-you-go API.
 
 ---
 
@@ -133,7 +133,7 @@ You review the output and make the final call. The skill surfaces options; it do
 
 ## Anti-patterns
 
-- Do not run this for trivial questions. It costs real money per run.
+- Do not run this for trivial questions. On the pay-as-you-go API it burns real tokens; on subscription plans it eats your usage allowance.
 - Do not treat consensus output as a final decision. You decide.
 - Do not use on questions with a clear right answer — waste of tokens.
 - Do not skip the synthesizer and read raw agent outputs yourself — the synthesis step is where the value is.

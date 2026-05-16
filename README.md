@@ -18,12 +18,12 @@ git clone https://github.com/MagnusTautra/agent-debate-skill ~/.claude/skills/ag
 
 Claude Code auto-loads any skill in `~/.claude/skills/<name>/SKILL.md`. Trigger phrases: *"debate this"*, *"stochastic consensus"*, *"what do other approaches say"*, *"stress test this decision"*.
 
-## Cost
+## Token usage
 
-- Consensus run (8 Sonnet + 1 Opus): ~$2–5 per run
-- Debate run (4 Sonnet × 3 rounds + 1 Opus): ~$4–8 per run
+- Consensus run: 8 Sonnet researchers + 1 Opus synthesizer
+- Debate run: 4 Sonnet agents × 3 rounds + 1 Opus synthesizer
 
-It's expensive per call. Use it on decisions where the answer matters more than the tokens.
+On **Claude Pro / Max subscriptions** this just consumes your usage allowance — no per-run dollar cost. On the **pay-as-you-go API** it adds up fast (long context × many agents). Either way: use it on decisions where the answer matters more than the tokens, not for routine questions.
 
 See [SKILL.md](./SKILL.md) for the full skill spec, framing templates, and synthesizer prompts.
 
